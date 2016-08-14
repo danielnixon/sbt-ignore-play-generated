@@ -1,5 +1,6 @@
 # sbt-ignore-play-generated
 
+[![Build Status](https://travis-ci.org/danielnixon/sbt-ignore-play-generated.svg?branch=master)](https://travis-ci.org/danielnixon/sbt-ignore-play-generated)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/sbt-ignore-play-generated/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/sbt-ignore-play-generated)
 
 An SBT plugin that will configure other plugins to ignore Play's generated source files.
