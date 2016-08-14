@@ -1,0 +1,4 @@
+jdk: openjdk6
+language: scala
+sudo: false
+script: sbt test
