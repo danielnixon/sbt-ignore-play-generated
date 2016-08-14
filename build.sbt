@@ -51,3 +51,29 @@ import scalariform.formatter.preferences.{DoubleIndentClassDeclaration, PlaceSca
 scalariformPreferences := scalariformPreferences.value
   .setPreference(DoubleIndentClassDeclaration, true)
   .setPreference(PlaceScaladocAsterisksBeneathSecondAsterisk, true)
+
+wartremoverErrors ++= Seq(
+  Wart.Any,
+  Wart.Any2StringAdd,
+  Wart.AsInstanceOf,
+  Wart.IsInstanceOf,
+  Wart.EitherProjectionPartial,
+  Wart.Enumeration,
+  Wart.Equals,
+  Wart.ExplicitImplicitTypes,
+  Wart.FinalCaseClass,
+  Wart.JavaConversions,
+  Wart.LeakingSealed,
+  Wart.ListOps,
+  Wart.MutableDataStructures,
+  Wart.Nothing,
+  Wart.Null,
+  Wart.OptionPartial,
+  Wart.Product,
+  Wart.Return,
+  Wart.Serializable,
+  Wart.Throw,
+  Wart.ToString,
+  Wart.TryPartial,
+  Wart.Var,
+  Wart.While)

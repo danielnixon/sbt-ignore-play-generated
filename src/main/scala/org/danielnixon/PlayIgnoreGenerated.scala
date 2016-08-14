@@ -14,6 +14,7 @@ object PlayIgnoreGenerated extends AutoPlugin {
     plugin.getOrElse(Plugins.empty)
   }
 
+  @SuppressWarnings(Array("org.wartremover.warts.Any", "org.wartremover.warts.Nothing"))
   override def projectSettings: Seq[Setting[_]] = ignoreSettings.flatMap(_.projectSettings)
 
   private def ignoreSettings: Seq[IgnoreSettings] = {

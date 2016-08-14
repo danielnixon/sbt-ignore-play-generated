@@ -8,7 +8,7 @@ abstract class GeneratedFilesIgnorer {
 
   protected def ignoreSettingsUnsafe: IgnoreSettings
 
-  def ignoreSettings: Option[IgnoreSettings] = catching(classOf[NoClassDefFoundError]) opt ignoreSettingsUnsafe
+  def ignoreSettings: Option[IgnoreSettings] = catching[IgnoreSettings](classOf[NoClassDefFoundError]) opt ignoreSettingsUnsafe
 }
 
 abstract class IgnoreSettings {
