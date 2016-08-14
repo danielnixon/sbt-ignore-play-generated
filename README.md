@@ -1,5 +1,7 @@
 # sbt-ignore-play-generated
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/sbt-ignore-play-generated/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/sbt-ignore-play-generated)
+
 An SBT plugin that will configure other plugins to ignore Play's generated source files.
 
 Play generates Scala source code based on your routes definitions, which you typically won't want to include in coverage metrics,
