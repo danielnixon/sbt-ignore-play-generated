@@ -2,7 +2,7 @@ sbtPlugin := true
 organization := "org.danielnixon"
 licenses := Seq("The Apache Software License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 name := "sbt-ignore-play-generated"
-version := "0.1-SNAPSHOT"
+version := "0.1"
 scalaVersion := "2.10.6"
 
 publishMavenStyle := true
