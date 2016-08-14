@@ -1,8 +1,32 @@
 sbtPlugin := true
 organization := "org.danielnixon"
+licenses := Seq("The Apache Software License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 name := "sbt-ignore-play-generated"
 version := "0.1-SNAPSHOT"
 scalaVersion := "2.10.6"
+
+publishMavenStyle := true
+publishArtifact in Test := false
+publishTo := {
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+}
+homepage := Some(url("https://github.com/danielnixon/sbt-ignore-play-generated"))
+pomExtra := (
+  <scm>
+    <url>git@github.com:danielnixon/sbt-ignore-play-generated.git</url>
+    <connection>scm:git:git@github.com:danielnixon/sbt-ignore-play-generated.git</connection>
+  </scm>
+    <developers>
+      <developer>
+        <id>danielnixon</id>
+        <name>Daniel Nixon</name>
+        <url>https://danielnixon.org/</url>
+      </developer>
+    </developers>)
 
 scalacOptions ++= Seq(
   "-deprecation",
