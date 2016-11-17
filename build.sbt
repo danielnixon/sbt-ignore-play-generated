@@ -40,11 +40,11 @@ scalacOptions ++= Seq(
   "-Ywarn-numeric-widen",
   "-Ywarn-nullary-override")
 
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.4" % Provided)
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.9" % Provided)
 addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.6.0" % Optional)
 addSbtPlugin("com.sksamuel.scapegoat" % "sbt-scapegoat" % "1.0.4" % Optional)
-addSbtPlugin("org.wartremover" % "sbt-wartremover" % "1.1.0" % Optional)
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.3.5" % Optional)
+addSbtPlugin("org.wartremover" % "sbt-wartremover" % "1.2.1" % Optional)
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.5.0" % Optional)
 
 import scalariform.formatter.preferences.{DoubleIndentClassDeclaration, PlaceScaladocAsterisksBeneathSecondAsterisk, _}
 
@@ -54,7 +54,6 @@ scalariformPreferences := scalariformPreferences.value
 
 wartremoverErrors ++= Seq(
   Wart.Any,
-  Wart.Any2StringAdd,
   Wart.AsInstanceOf,
   Wart.IsInstanceOf,
   Wart.EitherProjectionPartial,
@@ -72,6 +71,7 @@ wartremoverErrors ++= Seq(
   Wart.Product,
   Wart.Return,
   Wart.Serializable,
+  Wart.StringPlusAny,
   Wart.Throw,
   Wart.ToString,
   Wart.TryPartial,
