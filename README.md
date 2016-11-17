@@ -26,3 +26,7 @@ If you use any of the supported SBT plugins (below), they will now be configured
 * [sbt-scapegoat](https://github.com/sksamuel/sbt-scapegoat)
 * [sbt-wartremover](https://github.com/puffnfresh/wartremover)
 * [sbt-scoverage](https://github.com/scoverage/sbt-scoverage)
+
+# See also
+
+If you're using both Play and WartRemover, you might like [PlayWarts](https://github.com/danielnixon/playwarts).
