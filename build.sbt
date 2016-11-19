@@ -15,7 +15,7 @@ publishTo := {
     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
 }
 homepage := Some(url("https://github.com/danielnixon/sbt-ignore-play-generated"))
-pomExtra := (
+pomExtra := {
   <scm>
     <url>git@github.com:danielnixon/sbt-ignore-play-generated.git</url>
     <connection>scm:git:git@github.com:danielnixon/sbt-ignore-play-generated.git</connection>
@@ -26,7 +26,8 @@ pomExtra := (
         <name>Daniel Nixon</name>
         <url>https://danielnixon.org/</url>
       </developer>
-    </developers>)
+    </developers>
+}
 
 scalacOptions ++= Seq(
   "-deprecation",
@@ -40,7 +41,7 @@ scalacOptions ++= Seq(
   "-Ywarn-numeric-widen",
   "-Ywarn-nullary-override")
 
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.9" % Provided)
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.10" % Provided)
 addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.6.0" % Optional)
 addSbtPlugin("com.sksamuel.scapegoat" % "sbt-scapegoat" % "1.0.4" % Optional)
 addSbtPlugin("org.wartremover" % "sbt-wartremover" % "1.2.1" % Optional)
